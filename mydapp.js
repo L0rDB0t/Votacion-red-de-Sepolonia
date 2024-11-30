@@ -4,7 +4,7 @@ import Web3 from "web3";
 const web3 = new Web3(window.ethereum);
 
 // Dirección del contrato y su ABI
-const contractAddress = "0xd9145CCE52D386f254917e481eB44e9943F39138";
+const contractAddress = "0x38E9d42AEa9Cf2D11Eca01C24DeBB16ccd15B0c0";
 const abi = [ /* https://api-sepolia.etherscan.io/api */ ];
 
 // Instancia del contrato
