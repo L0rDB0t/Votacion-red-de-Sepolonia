@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<form id="proposalForm">
+    <input type="text" id="proposalName" placeholder="Nombre de la propuesta" />
+    <button type="submit">Añadir Propuesta</button>
+</form>
+<form id="whitelistForm">
+    <input type="text" id="whitelistAddress" placeholder="Dirección del usuario" />
+    <button type="submit">Añadir a la whitelist</button>
+</form>
+<form id="voteForm">
+    <input type="number" id="proposalId" placeholder="ID de la propuesta" />
+    <button type="submit">Votar</button>
+</form>
+
+<script>
+    document.getElementById("proposalForm").addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const proposalName = document.getElementById("proposalName").value;
+        await addProposal(proposalName);
+    });
+
+    document.getElementById("whitelistForm").addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const address = document.getElementById("whitelistAddress").value;
+        await addToWhitelist(address);
+    });
+
+    document.getElementById("voteForm").addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const proposalId = document.getElementById("proposalId").value;
+        await vote(proposalId);
+    });   
+</script> 
+<script src="mydapp.js"></script>
+</body> 
+</html>
